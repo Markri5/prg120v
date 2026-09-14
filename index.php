@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Eksempel 2</title>
+<title>Intro</title>
 </head>
 <body>
-  <h3>Eksempel 2</h3>
-    
-  <form method="post" action="" id="eksempel2" name="eksempel2">
-    Hva er 3 ganger 3 ? <input type="text" id="svar" name="svar" required  /> <br />
-    <input type="submit" value="Fortsett" id="fortsett" name="fortsett" />
-    <input type="reset" value="Nullstill" name="nullstill" id="nullstill" /> <br />
-  </form>
+    <h1>God morgen</h1>
+    <br><br/>
+    <p1>Dette er nettsiden for Programerings faget</p1>
+    <br><br/>
+    <!-- Fornavn og etternavn skjema -->
+    <form method="post" action="navn.php" id="godmorgen" name="godmorgen">
+            Fornavn <input type="text" id="fornavn" name="fornavn" required />
+        <br />
+            <!-- Mellomnavn -->
+            Etternavn <input type="text" id="etternavn" name="etternavn" required />
+        <br />
+            <input type="submit" value="Fortsett" id="fortsett" name="fortsett" />
+            <input type="reset" value="Nullstill" id="nullstill" name="nullstill" />
+        <br />
+    </form>
+    <!-- Tall kalkulator skjema -->
+    <br><br/>
+        <form method="post" action="tall.php" id="tall" name="tall">
+            Tall 1 <input type="text" id="tall1" name="tall1" required />
+        <br />
+            Tall 2 <input type="text" id="tall2" name="tall2" required />
+        <br />
+            <input type="submit" value="Fortsett" id="fortsett" name="fortsett" />
+            <input type="reset" value="Nullstill" id="nullstill" name="nullstill" />
+        <br />
+    </form>
 </body>
 </html>
-
-<?php     /* Eksempel 2 */
-/*
-/*    Programmet mottar fra et HTML-skjema et svar på spørsmålet "Hva er 3 ganger 3 ?"
-/*    Programmet sjekker om svaret er riktig og skriver ut en melding ang. svaret 
-/*    Meldingen skrives ut på samme side som HTML-skjemaet er
-*/
-  if (isset($_POST ["fortsett"])) 
-    {
-      $svar=$_POST ["svar"];
-	
-      if ($svar == 9)  
-        {
-          print("Riktig. 3 ganger 3 er 9 ");
-        }
-      else 
-        {
-          print("Feil. 3 ganger 3 er ikke  $svar. 3 ganger 3 er 9 ");
-        }
-    }
-?>
