@@ -37,16 +37,19 @@
 /*
 Dette henter fra boksene der du fyller inn Fornavn og etternavn i filen index.html
 */
+if (isset($_POST["fornavn"]) && isset($_POST["etternavn"])) {
   $fornavn=$_POST ["fornavn"];
   $etternavn=$_POST ["etternavn"];
 
   print ("God dag $fornavn $etternavn <br />");
+}
 ?>
 
 <?php    /* Navn eksempel */
 /*
 Dette er tall kalkulator som henter info fra filen index.html
 */
+if (isset($_POST["tall1"]) && isset($_POST["tall2"])) {
   $tall1=$_POST ["tall1"];
   $tall2=$_POST ["tall2"];  
 
@@ -57,4 +60,5 @@ Dette er tall kalkulator som henter info fra filen index.html
   print ("Tall 2 er $tall2 <br />");
   print ("Summen er $summen <br />");
   print ("Differansen er $differansen <br />"); 
+}
 ?>
